@@ -1,0 +1,14 @@
+--- SOAPpy-0.11.6/SOAPpy/WSDL.py~	2004-01-31 04:20:06.000000000 +0000
++++ SOAPpy-0.11.6/SOAPpy/WSDL.py	2004-11-09 11:17:48.927693480 +0000
+@@ -63,6 +63,11 @@
+             except (IOError, OSError): pass
+ 
+         if self.wsdl is None:
++            try:
++                self.wsdl = reader.loadFromURL(wsdlsource)
++            except (IOError, OSError): pass
++
++        if self.wsdl is None:
+             import StringIO
+             self.wsdl = reader.loadFromString(str(wsdlsource))
+             #print 'string'
