@@ -6,7 +6,7 @@ Version:	0.9.7
 Release:	6
 License:	Python
 Group:		Libraries/Python
-Source0:	http://prdownloads.sourceforge.net/pywebsvcs/SOAPpy097.tgz
+Source0:	http://dl.sourceforge.net/pywebsvcs/SOAPpy097.tgz
 URL:		http://sourceforge.net/projects/pywebsvcs/
 %pyrequires_eq	python
 BuildRequires:	python-devel >= 2.2.1
@@ -32,8 +32,6 @@ install -d $RPM_BUILD_ROOT%{py_sitedir}
 install SOAP.py $RPM_BUILD_ROOT%{py_sitedir}
 %py_comp $RPM_BUILD_ROOT%{py_sitedir}
 %py_ocomp $RPM_BUILD_ROOT%{py_sitedir}
-
-gzip -9nf 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
