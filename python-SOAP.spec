@@ -33,7 +33,7 @@ install SOAP.py $RPM_BUILD_ROOT%{py_sitedir}
 %py_comp $RPM_BUILD_ROOT%{py_sitedir}
 %py_ocomp $RPM_BUILD_ROOT%{py_sitedir}
 
-gzip -9nf README CHANGELOG docs/*.txt 
+gzip -9nf README CHANGELOG docs/*.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
