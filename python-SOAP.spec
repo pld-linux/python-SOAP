@@ -2,12 +2,12 @@
 Summary:	A SOAP library for Python
 Summary(pl):	Biblioteka SOAP dla Pythona
 Name:		python-SOAP
-Version:	0.10.4
-Release:	3
+Version:	0.11.3
+Release:	1
 License:	Python
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pywebsvcs/SOAPpy-%{version}.tar.gz
-# Source0-md5:	db2d6abeed95ad040bb38de1fbc45e80
+# Source0-md5:	dbdcafe76f73dffaa6948b026607d51b
 URL:		http://sourceforge.net/projects/pywebsvcs/
 %pyrequires_eq	python
 BuildRequires:	python-devel >= 2.3
@@ -44,7 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.* docs/*.txt validate tests tools contrib bid
+%doc README docs/*.txt validate tests tools contrib bid
 %dir %{py_sitescriptdir}/SOAPpy
 %{py_sitescriptdir}/SOAPpy/*.py?
 %dir %{py_sitescriptdir}/SOAPpy/wstools
