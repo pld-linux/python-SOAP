@@ -3,7 +3,7 @@ Summary:	A SOAP library for Python
 Summary(pl):	Biblioteka SOAP dla Pythona
 Name:		python-SOAP
 Version:	0.9.7
-Release:	5
+Release:	6
 License:	Python
 Group:		Libraries/Python
 Source0:	http://prdownloads.sourceforge.net/pywebsvcs/SOAPpy097.tgz
