@@ -11,7 +11,6 @@ Patch0:		%{name}-urltry.patch
 URL:		http://sourceforge.net/projects/pywebsvcs/
 %pyrequires_eq	python
 BuildRequires:	python-devel >= 1:2.3
-BuildRequires:	rpm-pythonprov
 BuildRequires:	python-fpconst
 BuildRequires:	python-PyXML
 BuildArch:	noarch
