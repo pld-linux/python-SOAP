@@ -1,29 +1,30 @@
+%include	/usr/lib/rpm/macros.python
 Summary:	A SOAP library for Python
 Summary(pl):	Biblioteka SOAP dla Pythona
 Name:		python-SOAP
 Version:	0.9.7
-Release:	2
+Release:	3
 License:	Python License
-Source0:	http://prdownloads.sourceforge.net/pywebsvcs/SOAPpy097.tgz
-URL:		http://sourceforge.net/projects/pywebsvcs/
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
+Source0:	http://prdownloads.sourceforge.net/pywebsvcs/SOAPpy097.tgz
+URL:		http://sourceforge.net/projects/pywebsvcs/
 %requires_eq	python
-BuildRequires:	python-devel >= 2.1
+BuildRequires:	python-devel >= 2.2
 BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%include /usr/lib/rpm/macros.python
-
 %description
-Web services for Python programmers, both client and servers. 
-This includes SOAP, WSDL, UDDI, etc.
+Web services for Python programmers, both client and servers. This
+includes SOAP, WSDL, UDDI, etc.
 
 %description -l pl
-Serwisy WWW dla programistów Pythona, zarówno klient i serwery.
-W tym SOAP, WSDL, UDDI itp.
+Serwisy WWW dla programistów Pythona, zarówno klient i serwery. W tym
+SOAP, WSDL, UDDI itp.
 
 %prep
 %setup -q -n SOAPpy097
