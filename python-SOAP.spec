@@ -7,6 +7,7 @@ Release:	6
 License:	Python
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pywebsvcs/SOAPpy097.tgz
+# Source0-md5:	1bbd42ce353a5e1ce6bc6ad181719bf6
 URL:		http://sourceforge.net/projects/pywebsvcs/
 %pyrequires_eq	python
 BuildRequires:	python-devel >= 2.2.1
