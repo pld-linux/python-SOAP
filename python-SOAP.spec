@@ -8,8 +8,8 @@ URL:		http://sourceforge.net/projects/pywebsvcs/
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
-Requires:	python >= 1.5.2
-BuildRequires:	python-devel >= 1.5.2
+Requires:	python >= 2.1
+BuildRequires:	python-devel >= 2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,9 +32,10 @@ python -O -c 'import py_compile; py_compile.compile("SOAP.py");'
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{python_sitedir}
+
 install SOAP.py? $RPM_BUILD_ROOT%{python_sitedir}
+
 gzip -9nf README CHANGELOG docs/*.txt 
-rm -f SOAP.py*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
