@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 Summary:	A SOAP library for Python
 Summary(pl):	Biblioteka SOAP dla Pythona
 Name:		python-SOAP
