@@ -1,4 +1,5 @@
 Summary:	A SOAP library for Python
+Summary(pl):	Biblioteka SOAP dla Pythona
 Name:		python-SOAP
 Version:	0.9.7
 Release:	1
@@ -10,6 +11,7 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
 %requires_eq	python
 BuildRequires:	python-devel >= 2.1
+BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -18,6 +20,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Web services for Python programmers, both client and servers. 
 This includes SOAP, WSDL, UDDI, etc.
+
+%description -l pl
+Serwisy WWW dla programistów Pythona, zarówno klient i serwery.
+W tym SOAP, WSDL, UDDI itp.
 
 %prep
 %setup -q -n SOAPpy097
