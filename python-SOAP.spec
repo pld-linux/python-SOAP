@@ -42,7 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.* docs/*.txt validate tests tools contrib bid 
+%doc README.* docs/*.txt validate tests tools contrib bid
 %dir %{py_sitedir}/SOAPpy
 %{py_sitedir}/SOAPpy/*.py?
 %dir %{py_sitedir}/SOAPpy/wstools
