@@ -8,7 +8,7 @@ URL:		http://sourceforge.net/projects/pywebsvcs/
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
-Requires:	python >= 2.1
+%requires_eq	python
 BuildRequires:	python-devel >= 2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
