@@ -8,7 +8,7 @@ License:	Python License
 Group:		Libraries/Python
 Source0:	http://prdownloads.sourceforge.net/pywebsvcs/SOAPpy097.tgz
 URL:		http://sourceforge.net/projects/pywebsvcs/
-%requires_eq	python
+%pyrequires_eq	python
 BuildRequires:	python-devel >= 2.2
 BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
