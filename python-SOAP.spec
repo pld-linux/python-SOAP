@@ -9,7 +9,7 @@ Group:		Libraries/Python
 Source0:	http://prdownloads.sourceforge.net/pywebsvcs/SOAPpy097.tgz
 URL:		http://sourceforge.net/projects/pywebsvcs/
 %pyrequires_eq	python
-BuildRequires:	python-devel >= 2.2
+BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
