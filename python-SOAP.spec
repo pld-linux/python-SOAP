@@ -13,10 +13,7 @@ BuildRequires:	python-devel >= 2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define python_prefix      %(echo `python -c "import sys; print sys.prefix"`)
-%define python_version     %(echo `python -c "import sys; print sys.version[:3]"`)
-%define python_libdir      %{python_prefix}/lib/python%{python_version}
-%define python_sitedir     %{python_libdir}/site-packages
+%include /usr/lib/rpm/macros.python
 
 %description
 Web services for Python programmers, both client and servers. 
@@ -25,15 +22,13 @@ This includes SOAP, WSDL, UDDI, etc.
 %prep
 %setup -q -n SOAPpy097
 
-%build
-python -c 'import py_compile; py_compile.compile("SOAP.py");'
-python -O -c 'import py_compile; py_compile.compile("SOAP.py");'
-
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{python_sitedir}
+install -d $RPM_BUILD_ROOT%{py_sitedir}
 
-install SOAP.py? $RPM_BUILD_ROOT%{python_sitedir}
+install SOAP.py $RPM_BUILD_ROOT%{py_sitedir}
+%py_comp $RPM_BUILD_ROOT%{py_sitedir}
+%py_ocomp $RPM_BUILD_ROOT%{py_sitedir}
 
 gzip -9nf README CHANGELOG docs/*.txt 
 
@@ -43,4 +38,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz docs/*.gz validate tests tools contrib bid *.py
-%{python_sitedir}/*.py?
+%{py_sitedir}/*.py?
