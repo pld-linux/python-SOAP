@@ -6,11 +6,6 @@ Version:	0.9.7
 Release:	3
 License:	Python License
 Group:		Development/Languages/Python
-Group(de):	Entwicklung/Sprachen/Python
-Group(es):	Desarrollo/Lenguages/Python
-Group(fr):	Development/Langues/Python
-Group(pl):	Programowanie/Jêzyki/Python
-Group(pt):	Desenvolvimento/Línguas/Python
 Source0:	http://prdownloads.sourceforge.net/pywebsvcs/SOAPpy097.tgz
 URL:		http://sourceforge.net/projects/pywebsvcs/
 %requires_eq	python
