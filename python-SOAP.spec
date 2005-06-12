@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/pywebsvcs/SOAPpy-%{version}.tar.gz
 Patch0:		%{name}-urltry.patch
 URL:		http://sourceforge.net/projects/pywebsvcs/
 %pyrequires_eq	python
+Requires:		python-fpconst
 BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	python-fpconst
 BuildRequires:	python-PyXML
