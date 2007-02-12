@@ -1,5 +1,5 @@
 Summary:	A SOAP library for Python
-Summary(pl):	Biblioteka SOAP dla Pythona
+Summary(pl.UTF-8):   Biblioteka SOAP dla Pythona
 Name:		python-SOAP
 Version:	0.12.0
 Release:	3
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Web services for Python programmers, both client and servers. This
 includes SOAP, WSDL, UDDI, etc.
 
-%description -l pl
-Serwisy WWW dla programistów Pythona, zarówno klient i serwery. W tym
+%description -l pl.UTF-8
+Serwisy WWW dla programistÃ³w Pythona, zarÃ³wno klient i serwery. W tym
 SOAP, WSDL, UDDI itp.
 
 %prep
