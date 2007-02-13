@@ -1,5 +1,5 @@
 Summary:	A SOAP library for Python
-Summary(pl.UTF-8):   Biblioteka SOAP dla Pythona
+Summary(pl.UTF-8):	Biblioteka SOAP dla Pythona
 Name:		python-SOAP
 Version:	0.12.0
 Release:	3
