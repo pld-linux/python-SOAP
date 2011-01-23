@@ -5,16 +5,17 @@ Version:	0.12.0
 Release:	5
 License:	Python
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/pywebsvcs/SOAPpy-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/pywebsvcs/SOAPpy-%{version}.tar.gz
 # Source0-md5:	d0d29f9b6fb27bfadc69b64a36321e20
 Patch0:		%{name}-urltry.patch
 Patch1:		%{name}-future.patch
 URL:		http://sourceforge.net/projects/pywebsvcs/
 %pyrequires_eq	python
-Requires:		python-fpconst
+BuildRequires:	python-PyXML
 BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	python-fpconst
-BuildRequires:	python-PyXML
+BuildRequires:	rpm-pythonprov
+Requires:	python-fpconst
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
