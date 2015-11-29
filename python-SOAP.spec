@@ -10,6 +10,7 @@ Source0:	http://downloads.sourceforge.net/pywebsvcs/SOAPpy-%{version}.tar.gz
 Patch0:		%{name}-urltry.patch
 Patch1:		%{name}-future.patch
 URL:		http://sourceforge.net/projects/pywebsvcs/
+BuildRequires:	rpmbuild(macros) >= 1.710
 %pyrequires_eq	python
 BuildRequires:	python-PyXML
 BuildRequires:	python-devel >= 1:2.3
