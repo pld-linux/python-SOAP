@@ -7,7 +7,7 @@ diff -ur SOAPpy-0.12.0-orig/SOAPpy/Client.py SOAPpy-0.12.0/SOAPpy/Client.py
  """
 +from __future__ import nested_scopes
  
- ident = '$Id$'
+ ident = '$Id: Client.py,v 1.27 2005/02/21 20:27:09 warnes Exp $'
  from version import __version__
  
 -from __future__ import nested_scopes
@@ -24,7 +24,7 @@ diff -ur SOAPpy-0.12.0-orig/SOAPpy/Server.py SOAPpy-0.12.0/SOAPpy/Server.py
  
 +from __future__ import nested_scopes
 +
- ident = '$Id$'
+ ident = '$Id: Server.py,v 1.21 2005/02/15 16:32:22 warnes Exp $'
  from version import __version__
  
 -from __future__ import nested_scopes
@@ -41,7 +41,7 @@ diff -ur SOAPpy-0.12.0-orig/SOAPpy/Types.py SOAPpy-0.12.0/SOAPpy/Types.py
  
 +from __future__ import nested_scopes
 +
- ident = '$Id$'
+ ident = '$Id: Types.py,v 1.19 2005/02/22 04:29:43 warnes Exp $'
  from version import __version__
  
 -from __future__ import nested_scopes
