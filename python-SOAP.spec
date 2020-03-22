@@ -1,22 +1,22 @@
+# TODO: how to run tests in %build?
 Summary:	A SOAP library for Python
 Summary(pl.UTF-8):	Biblioteka SOAP dla Pythona
 Name:		python-SOAP
-Version:	0.12.0
-Release:	7
-License:	Python
+Version:	0.12.22
+Release:	1
+License:	BSD
 Group:		Libraries/Python
-Source0:	http://downloads.sourceforge.net/pywebsvcs/SOAPpy-%{version}.tar.gz
-# Source0-md5:	d0d29f9b6fb27bfadc69b64a36321e20
+#Source0Download: https://github.com/kiorky/SOAPpy/releases
+Source0:	https://github.com/kiorky/SOAPpy/archive/%{version}/SOAPpy-%{version}.tar.gz
+# Source0-md5:	c93de2e7827bcbb6841a8a0ca1de5c59
 Patch0:		%{name}-urltry.patch
-Patch1:		%{name}-future.patch
-URL:		http://sourceforge.net/projects/pywebsvcs/
-BuildRequires:	python-PyXML
+URL:		https://github.com/kiorky/SOAPpy
 BuildRequires:	python-devel >= 1:2.3
-BuildRequires:	python-fpconst
+BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.710
-Requires:	python
-Requires:	python-fpconst
+BuildRequires:	rpmbuild(macros) >= 1.714
+BuildRequires:	sed >= 4.0
+Requires:	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,29 +31,32 @@ SOAP, WSDL, UDDI itp.
 %prep
 %setup -q -n SOAPpy-%{version}
 %patch0 -p1
-%patch1 -p1
+rm -f src/SOAPpy/*.orig
 
 %build
 %py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{py_sitescriptdir}
 
 %py_install
 
-find $RPM_BUILD_ROOT%{py_sitescriptdir} -type f -name "*.py" -exec rm {} \;
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -pr bid contrib tests tools validate $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+%{__sed} -i -e '1s,/usr/bin/env python,%{__python},' $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/*/*.py
+%{__sed} -i -e '1s,#!/usr/bin/python\s*$,#!%{__python},' $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/tests/testleak.py
+
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README docs/*.txt validate tests tools contrib bid
+%doc CHANGES.txt LICENSE README.txt TODO old.Changelog docs/*.txt
 %dir %{py_sitescriptdir}/SOAPpy
-%{py_sitescriptdir}/SOAPpy/*.py?
-%dir %{py_sitescriptdir}/SOAPpy/wstools
-%{py_sitescriptdir}/SOAPpy/wstools/*.py[co]
+%{py_sitescriptdir}/SOAPpy/*.py[co]
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/SOAPpy-%{version}-py2.7.egg-info
 %endif
+%{_examplesdir}/%{name}-%{version}
