@@ -30,7 +30,7 @@ SOAP, WSDL, UDDI itp.
 
 %prep
 %setup -q -n SOAPpy-%{version}
-%patch0 -p1
+%patch -P0 -p1
 rm -f src/SOAPpy/*.orig
 
 %build
